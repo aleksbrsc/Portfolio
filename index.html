@@ -13,14 +13,21 @@
 </head>
 <body>
     <main>
-        <img id="title" src="images/title.svg">
+        <img id="title" src="images/title_with_stroke.svg">
+        <h1>ALEKSBRSC</h1>
+        <p>SOFTWARE</p>
+        <p>DEVELOPMENT</p>
+        <p>IN TORONTO</p>
+        <!-- <img id="title" src="images/title.svg"> -->
+        <!-- <img id="title-outline" src="images/title_outline.svg"> -->
     </main>
     <nav>
         <ul>
-            <li id="projects">projects</li>
-            <li id="info">info</li>
-            <li id="contact">contact</li>
-            <li id="github"><a href="https://github.com/aleksbrsc" target="_blank">github</a></li>
+            <li id="projects" class="navbar-option">PROJECTS</li>
+            <li id="info" class="navbar-option">INFO</li>
+            <li id="contact" class="navbar-option">CONTACT</li>
+            <li id="github" class="navbar-option"><a href="https://github.com/aleksbrsc" target="_blank"><img src="images/github.svg"></a></li>
+            <!-- <li id="github" class="navbar-option"><a href="https://github.com/aleksbrsc" target="_blank">GITHUB</a></li> -->
         </ul>
     </nav>
     <div id="horizontal">
@@ -29,5 +36,36 @@
     <div id="diagonal">
         <img id="diagonal-line" src="images/diagonal_line.svg">
     </div>
+
+    <script>
+        document.addEventListener('mousemove', function(event) {
+            var horizontalLine = document.getElementById('horizontal-line');
+            var navbarOptions = document.getElementsByClassName('navbar-option');
+            var mouseY = event.clientY;
+
+            for (var i = 0; i < navbarOptions.length; i++) {
+                var navbarOption = navbarOptions[i];
+                var navbarOptionRect = navbarOption.getBoundingClientRect();
+                var navbarOptionY = navbarOptionRect.top + window.scrollY;
+                var navbarOptionHeight = navbarOptionRect.height;
+
+                if (mouseY >= navbarOptionY && mouseY <= navbarOptionY + navbarOptionHeight) {
+                    var distance = Math.abs(event.clientX - navbarOptionRect.left);
+                    var color = getColor(distance);
+                    navbarOption.style.color = color;
+                } else {
+                    navbarOption.style.color = "black";
+                }
+            }
+
+            horizontalLine.style.top = mouseY + 'px';
+        });
+
+        function getColor(distance) {
+            var maxDistance = window.innerWidth; // color range
+            var hue = (distance / maxDistance) * 240; // map distance to hue value (0-240)
+            return 'hsl(' + hue + ', 100%, 50%)';
+        }
+    </script>
 </body>
 </html>

@@ -18,6 +18,16 @@
     src: url(fonts/Nanum_Myeongjo/NanumMyeongjo-ExtraBold.ttf);
 }
 
+@font-face {
+    font-family: Mori;
+    src: url(fonts/PPMori/PPMori-Variable.ttf);
+}
+
+@font-face {
+    font-family: Mori2;
+    src: url(fonts/PPMori/PPMori-Variable.ttf) format("truetype");
+}
+
 body {
     font-family: NanumMyeongjo-Regular;
     color: #000;
@@ -30,7 +40,7 @@ body {
 }
 
 main {
-    grid-column: 1 / span 2; /* main spans 2 columns */
+    grid-column: 1 / span 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,11 +49,10 @@ main {
 
 main #title {
     margin-left: 5rem;
-    fill: none;
-
+    display: none;
 }
 
-/* main h1 {
+main h1 {
     display: flex;
     align-items: center;
     margin: 0 0 0 5rem;
@@ -55,49 +64,47 @@ main #title {
     line-height: 11.75rem;
 }
 
-
-main #underlayer {
-    margin: 0px;
-    position: absolute;
-    top: 0;
-    left: 5rem;
-    width: calc(100% - 5rem);
-    height: 100%;
-}
-
 main p {
+    font-family: Mori2;
     margin: 0px;
     margin-right: 2rem;
     line-height: 1.25rem;
     align-self: flex-end;
     padding: 0;
-
-} */
+}
 
 nav {
-    font-family: KaiSei-Decol;
+    font-family: Mori;
     grid-column: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 
 nav ul {
     list-style-type: none;
     line-height: 6rem;
     font-size: 2rem;
-    margin-right: 10vmax;
+    margin-right: 6vmax;
 }
 
-nav #github a {
-    text-decoration: none;
+.navbar-option {
     color: black;
 }
 
+nav #github img {
+    margin-top: 1.5rem;
+    max-width: 5rem;
+}
+
+/* nav #github a {
+    text-decoration: none;
+    color: black;
+} */
+
 #horizontal {
     position: absolute;
-    margin-top: 50vh;
+
 }
 
 #horizontal #horizontal-line {
