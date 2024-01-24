@@ -56,7 +56,6 @@ main {
     max-width: 62rem;
 }
 
-
 main p:hover {
     z-index: 1;
     color: transparent;
@@ -69,10 +68,10 @@ main p:hover {
     animation: noise 1s linear alternate-reverse;
 }
 
-main #title {
+/* main #title {
     margin-left: 5rem;
     display: none;
-}
+} */
 
 main h1 {
     display: flex;

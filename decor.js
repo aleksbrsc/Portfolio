@@ -12,3 +12,4 @@ var randomIndex = Math.floor(Math.random() * images.length);
 var randomImage = images[randomIndex];
 var picture = document.getElementById('picture');
 picture.src = randomImage;
+

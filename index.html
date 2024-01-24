@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,23 +12,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>abrsc</title>
 </head>
+
 <body>
     <img id="picture" src="">
     <main>
-        <img id="title" src="images/title_with_stroke.svg">
         <h1>ALEKSBRSC</h1>
         <p>SOFTWARE</p>
         <p>DEVELOPMENT</p>
         <p>IN TORONTO</p>
-        <!-- <img id="title" src="images/title.svg"> -->
-        <!-- <img id="title-outline" src="images/title_outline.svg"> -->
     </main>
     <nav>
         <ul>
-            <li id="projects" class="navbar-option">PROJECTS</li>
-            <li id="info" class="navbar-option">INFO</li>
-            <li id="contact" class="navbar-option">CONTACT</li>
-            <!-- <li id="github" class="navbar-option"><a href="https://github.com/aleksbrsc" target="_blank"><img src="images/github.svg"></a></li> -->
+            <li id="projects" class="navbar-option" onclick="handleNavbarOptionClick(this)">PROJECTS</li>
+            <li id="info" class="navbar-option" onclick="handleNavbarOptionClick(this)">INFO</li>
+            <li id="contact" class="navbar-option" onclick="handleNavbarOptionClick(this)">CONTACT</li>
             <li id="github"><a class="navbar-option" href="https://github.com/aleksbrsc" target="_blank">GITHUB</a></li>
         </ul>
     </nav>
@@ -37,13 +35,13 @@
     <div id="diagonal">
         <img id="diagonal-line" src="images/diagonal_line.svg">
     </div>
-    
+
     <script src="decor.js"></script> <!-- random decoration -->
-    <script> // navbar color change
-        document.addEventListener('mousemove', function(event) {
+    <script>
+        document.addEventListener('mousemove', function (event) {
             var horizontalLine = document.getElementById('horizontal-line');
             var navbarOptions = document.getElementsByClassName('navbar-option');
-            var mouseY = event.clientY - 1;
+            var mouseY = event.clientY + 2;
 
             for (var i = 0; i < navbarOptions.length; i++) {
                 var navbarOption = navbarOptions[i];
@@ -68,7 +66,25 @@
             var hue = (distance / maxDistance) * 240; // map distance to hue value (0-240)
             return 'hsl(' + hue + ', 100%, 50%)';
         }
+
         
+                function handleNavbarOptionClick(navbarOption) {
+                    if (navbarOption.id !== 'github') {
+                        var body = document.querySelector('body');
+                        var main = document.querySelector('main');
+                        var navbar = document.querySelector('nav');
+                        body.style.transition = 'all 0.5s ease'; 
+                        main.style.transition = 'all 0.5s ease';
+                        navbar.style.transition = 'all 0.5s ease';
+                        main.style.transform = 'translateX(-105%)';
+                        navbar.style.opacity = '0';
+                        setTimeout(function () {
+                            body.style.opacity = '0';
+                        }, 200);
+                    }
+                }
+
     </script>
 </body>
+
 </html>
