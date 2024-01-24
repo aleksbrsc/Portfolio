@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Kaisei-Decol;
+    src: url(fonts/Kaisei_Decol/KaiseiDecol-Regular.ttf);
+}
+
+@font-face {
+    font-family: NanumMyeongjo-Bold;
+    src: url(fonts/Nanum_Myeongjo/NanumMyeongjo-Bold.ttf);
+}
+
+@font-face {
+    font-family: NanumMyeongjo-Regular;
+    src: url(fonts/Nanum_Myeongjo/NanumMyeongjo-Regular.ttf);
+}
+
+@font-face {
+    font-family: NanumMyeongjo-ExtraBold;
+    src: url(fonts/Nanum_Myeongjo/NanumMyeongjo-ExtraBold.ttf);
+}
+
+body {
+    font-family: NanumMyeongjo-Regular;
+    color: #000;
+    background-color: #FFF;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+    height: 100vh
+}
+
+main {
+    grid-column: 1 / span 2; /* main spans 2 columns */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 62rem;
+}
+
+main h1 {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 5rem;
+    left: 62vmax;
+
+    font-family: NanumMyeongjo-Bold;
+    font-size: 11vmax;
+    font-weight: 700px;
+    line-height: 11.75rem;
+}
+
+main p {
+    margin: 0px;
+    margin-right: 2rem;
+    line-height: 1.25rem;
+    align-self: flex-end;
+    padding: 0;
+
+}
+
+nav {
+    font-family: KaiSei-Decol;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    line-height: 6rem;
+    font-size: 2rem;
+    margin-right: 10vmax;
+}
+
+nav #github a {
+    text-decoration: none;
+    color: black;
+}
+
+#horizontal {
+    position: absolute;
+    margin-top: 50vh;
+}
+
+#horizontal #horizontal-line {
+    position: absolute;
+}
+
+#diagonal {
+    position: absolute;
+}
+
+#diagonal #diagonal-line {
+    position: absolute;
+    left: 70vmax;
+    height: 100vh;
+}
