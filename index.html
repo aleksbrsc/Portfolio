@@ -12,6 +12,7 @@
     <title>abrsc</title>
 </head>
 <body>
+    <img id="picture" src="">
     <main>
         <img id="title" src="images/title_with_stroke.svg">
         <h1>ALEKSBRSC</h1>
@@ -36,8 +37,9 @@
     <div id="diagonal">
         <img id="diagonal-line" src="images/diagonal_line.svg">
     </div>
-
-    <script>
+    
+    <script src="decor.js"></script> <!-- random decoration -->
+    <script> // navbar color change
         document.addEventListener('mousemove', function(event) {
             var horizontalLine = document.getElementById('horizontal-line');
             var navbarOptions = document.getElementsByClassName('navbar-option');
@@ -66,12 +68,7 @@
             var hue = (distance / maxDistance) * 240; // map distance to hue value (0-240)
             return 'hsl(' + hue + ', 100%, 50%)';
         }
-
-
         
     </script>
-
-
-
 </body>
 </html>

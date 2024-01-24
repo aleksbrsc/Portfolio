@@ -28,6 +28,13 @@
     src: url(fonts/PPMori/PPMori-Variable.ttf) format("truetype");
 }
 
+#picture {
+    position: absolute;
+    bottom: 0;
+    max-width: 16rem;
+    color: black;
+}
+
 body {
     font-family: NanumMyeongjo-Regular;
     color: #000;
@@ -39,7 +46,6 @@ body {
     height: 100vh;
 
     user-select: none;
-
 }
 
 main {
@@ -62,7 +68,6 @@ main p:hover {
     -webkit-text-fill-color: transparent;
     animation: noise 1s linear alternate-reverse;
 }
-
 
 main #title {
     margin-left: 5rem;
