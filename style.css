@@ -92,15 +92,15 @@ nav ul {
     color: black;
 }
 
-nav #github img {
+/* nav #github img {
     margin-top: 1.5rem;
     max-width: 5rem;
-}
+} */
 
-/* nav #github a {
+nav #github a {
     text-decoration: none;
     color: black;
-} */
+}
 
 #horizontal {
     position: absolute;

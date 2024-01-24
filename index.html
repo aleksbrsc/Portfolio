@@ -26,8 +26,8 @@
             <li id="projects" class="navbar-option">PROJECTS</li>
             <li id="info" class="navbar-option">INFO</li>
             <li id="contact" class="navbar-option">CONTACT</li>
-            <li id="github" class="navbar-option"><a href="https://github.com/aleksbrsc" target="_blank"><img src="images/github.svg"></a></li>
-            <!-- <li id="github" class="navbar-option"><a href="https://github.com/aleksbrsc" target="_blank">GITHUB</a></li> -->
+            <!-- <li id="github" class="navbar-option"><a href="https://github.com/aleksbrsc" target="_blank"><img src="images/github.svg"></a></li> -->
+            <li id="github"><a class="navbar-option" href="https://github.com/aleksbrsc" target="_blank">GITHUB</a></li>
         </ul>
     </nav>
     <div id="horizontal">
@@ -41,7 +41,7 @@
         document.addEventListener('mousemove', function(event) {
             var horizontalLine = document.getElementById('horizontal-line');
             var navbarOptions = document.getElementsByClassName('navbar-option');
-            var mouseY = event.clientY;
+            var mouseY = event.clientY - 1;
 
             for (var i = 0; i < navbarOptions.length; i++) {
                 var navbarOption = navbarOptions[i];
