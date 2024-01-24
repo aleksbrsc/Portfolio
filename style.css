@@ -37,7 +37,13 @@ main {
     max-width: 62rem;
 }
 
-main h1 {
+main #title {
+    margin-left: 5rem;
+    fill: none;
+
+}
+
+/* main h1 {
     display: flex;
     align-items: center;
     margin: 0 0 0 5rem;
@@ -49,6 +55,16 @@ main h1 {
     line-height: 11.75rem;
 }
 
+
+main #underlayer {
+    margin: 0px;
+    position: absolute;
+    top: 0;
+    left: 5rem;
+    width: calc(100% - 5rem);
+    height: 100%;
+}
+
 main p {
     margin: 0px;
     margin-right: 2rem;
@@ -56,7 +72,7 @@ main p {
     align-self: flex-end;
     padding: 0;
 
-}
+} */
 
 nav {
     font-family: KaiSei-Decol;
