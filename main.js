@@ -1,5 +1,5 @@
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/index.html', true);
+xhr.open('GET', 'Portfolio/index.html', true);
 xhr.setRequestHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
 xhr.send();
 
