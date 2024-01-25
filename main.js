@@ -52,6 +52,18 @@ function handleNavbarOptionClick(navbarOption) {
     }
 }
 
+window.onbeforeunload = function() {
+    var body = document.querySelector('body');
+    var main = document.querySelector('main');
+    var navbar = document.querySelector('nav');
+    body.style.transition = '';
+    main.style.transition = '';
+    navbar.style.transition = '';
+    main.style.transform = '';
+    navbar.style.opacity = '';
+    body.style.opacity = '';
+};
+
 window.onpopstate = function(event) {
     var body = document.querySelector('body');
     var main = document.querySelector('main');
@@ -63,4 +75,3 @@ window.onpopstate = function(event) {
     navbar.style.opacity = '';
     body.style.opacity = '';
 };
-

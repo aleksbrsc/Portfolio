@@ -4,5 +4,5 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
         body.style.transition = 'opacity 0.5s ease';
         body.style.opacity = '1';
-    }, 200);
+    }, 100);
 });
