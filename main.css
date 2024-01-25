@@ -101,7 +101,7 @@ nav ul {
 }
 
 nav ul li:hover {
-    cursor: url(images/hand.svg), crosshair;
+    cursor: crosshair;
 }
 
 .navbar-option {
@@ -121,6 +121,7 @@ nav #github a {
 #horizontal #horizontal-line {
     position: absolute;
     transition: transform 0.3s ease-in;
+    width: 100vw;
 }
 
 #diagonal {
