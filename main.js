@@ -2,7 +2,7 @@ document.addEventListener('mousemove', function (event) {
     var horizontalLine = document.getElementById('horizontal-line');
     var navbarOptions = document.getElementsByClassName('navbar-option');
     var mouseY = event.clientY;
-
+    
     for (var i = 0; i < navbarOptions.length; i++) {
         var navbarOption = navbarOptions[i];
         var navbarOptionRect = navbarOption.getBoundingClientRect();
