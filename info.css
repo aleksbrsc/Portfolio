@@ -43,3 +43,39 @@ main {
     bottom: 0;
     right: 0;
 }
+
+@media (max-width: 700px) {
+    body {
+        overflow: auto;
+        margin: 0;
+    }
+
+    main {
+        margin-top: 20vh;
+        margin-bottom: 0rem;
+        height: 65vh;
+
+    }
+
+    #info {
+        width: 80vw;
+        margin: 0;
+    }
+
+    footer {
+        color: none;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #fff; 
+    }
+    
+    #back {
+        position: relative;
+    }
+
+    main h2,
+    main a,
+    main p {
+        margin-left: 10vw;
+    }
+}
