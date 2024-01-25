@@ -1,7 +1,12 @@
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/index.html', true);
+xhr.setRequestHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+xhr.send();
+
 document.addEventListener('mousemove', function (event) {
     var horizontalLine = document.getElementById('horizontal-line');
     var navbarOptions = document.getElementsByClassName('navbar-option');
-    var mouseY = event.clientY + 2;
+    var mouseY = event.clientY;
 
     for (var i = 0; i < navbarOptions.length; i++) {
         var navbarOption = navbarOptions[i];
@@ -27,7 +32,6 @@ function getColor(distance) {
     return 'hsl(' + hue + ', 100%, 50%)';
 }
 
-// site transition
 function handleNavbarOptionClick(navbarOption) {
     if (navbarOption.id !== 'github') {
         var body = document.querySelector('body');
@@ -42,6 +46,10 @@ function handleNavbarOptionClick(navbarOption) {
             body.style.opacity = '0';
         }, 200);
         setTimeout(function () {
+            body.style.opacity = '1';
+            main.style.transform = 'translateX(0)';
+            navbar.style.opacity = '1';
+
             if (navbarOption.id === 'projects') {
                 window.location.href = 'projects.html';
             } else if (navbarOption.id === 'info') {
@@ -50,6 +58,8 @@ function handleNavbarOptionClick(navbarOption) {
                 window.location.href = 'contact.html';
             }
         }, 800);
+
+
 
     }
 }
