@@ -31,7 +31,7 @@
 #picture {
     position: absolute;
     bottom: 0;
-    max-width: 16rem;
+    max-width: 30vmin;
     color: black;
 }
 
@@ -44,7 +44,6 @@ body {
     grid-template-columns: 2fr 1fr;
     grid-gap: 1rem;
     height: 100vh;
-
     user-select: none;
 }
 
@@ -57,21 +56,9 @@ main {
 }
 
 main p:hover {
-    z-index: 1;
-    color: transparent;
     -webkit-text-stroke: 1px #1E1E1E;
     -webkit-text-fill-color: transparent;
-    animation: noise 1s linear alternate-reverse;
-    background-image: url(white-noise.png);
-    background-size: cover;
-    -webkit-text-fill-color: transparent;
-    animation: noise 1s linear alternate-reverse;
 }
-
-/* main #title {
-    margin-left: 5rem;
-    display: none;
-} */
 
 main h1 {
     display: flex;
@@ -88,10 +75,9 @@ main h1 {
 main p {
     font-family: Mori2;
     margin: 0px;
-    margin-right: 2rem;
     line-height: 1.25rem;
     align-self: flex-end;
-    padding: 0;
+    transition: all 0.1s ease-out;
 }
 
 nav {
@@ -100,6 +86,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 nav ul {
@@ -140,4 +127,122 @@ nav #github a {
     position: absolute;
     left: 70vmax;
     height: 100vh;
+    transition: transform 0.3s ease-in;
+}
+
+@media screen and (max-width: 1455px) {
+    main p {
+        margin-right: 2vmax;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    main p {
+        margin-right: 4vmax;
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    main p {
+        margin-right: 7vmax;
+    }
+}
+
+@media screen and (max-width: 1255px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-1deg);
+    }
+}
+
+@media screen and (max-width: 1245px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-2deg);
+    }
+}
+
+@media screen and (max-width: 1235px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-3deg);
+    }
+}
+
+@media screen and (max-width: 1225px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-4deg);
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-5deg);
+    }
+}
+
+@media screen and (max-width: 1205px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-6deg);
+    }
+}
+
+@media screen and (max-width: 1195px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-7deg);
+    }
+}
+
+@media screen and (max-width: 1185px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-8deg);
+    }
+}
+
+@media screen and (max-width: 1175px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-9deg);
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    #diagonal #diagonal-line {
+        transform: rotate(-9.65deg);
+    }
+
+    nav ul {
+        font-size: 2.5vmax;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #picture {
+        max-width: 50vmin;
+    }
+
+    main {
+        display: block;
+        margin: 0 0 0 2rem;
+
+    }
+
+    main h1 {
+        margin: 0;
+        font-size: 10vmin;
+    }
+
+    main p {
+        font-size: 3vmin;
+
+    }
+
+    nav ul {
+        font-size: 2.5vmax;
+    }
+
+    #horizontal {
+        display: none;
+    }
+
+    #diagonal {
+        display: none;
+    }
 }
