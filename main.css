@@ -126,7 +126,6 @@ nav #github a {
     padding: 0;
     position: absolute;
     transition: transform 0.3s ease-in;
-
 }
 
 #diagonal {
@@ -137,93 +136,81 @@ nav #github a {
     position: absolute;
     left: 70vmax;
     transition: transform 0.3s ease-in;
-    height: 100vh;
 }
 
-@media screen and (max-width: 1455px) {
-    main p {
-        margin-right: 2vmax;
-    }
-}
 
 @media screen and (max-width: 1400px) {
-    main p {
-        margin-right: 4vmax;
-    }
+
 }
 
 @media screen and (max-width: 1365px) {
-    main p {
-        margin-right: 6vmax;
-    }
-}
-
-@media screen and (max-width: 1255px) {
     #diagonal #diagonal-line {
         transform: rotate(-1deg);
     }
 }
 
-@media screen and (max-width: 1245px) {
+@media screen and (max-width: 1355px) {
+ 
     #diagonal #diagonal-line {
         transform: rotate(-2deg);
     }
 }
 
-@media screen and (max-width: 1235px) {
+@media screen and (max-width: 1345px) {
     #diagonal #diagonal-line {
         transform: rotate(-3deg);
     }
 }
 
-@media screen and (max-width: 1225px) {
+@media screen and (max-width: 1335px) {
     #diagonal #diagonal-line {
         transform: rotate(-4deg);
     }
 }
 
-@media screen and (max-width: 1215px) {
+@media screen and (max-width: 1325px) {
     #diagonal #diagonal-line {
         transform: rotate(-5deg);
     }
 }
 
-@media screen and (max-width: 1205px) {
+@media screen and (max-width: 1315px) {
     #diagonal #diagonal-line {
         transform: rotate(-6deg);
     }
 }
 
-@media screen and (max-width: 1195px) {
+@media screen and (max-width: 1305px) {
     #diagonal #diagonal-line {
         transform: rotate(-7deg);
     }
 }
 
-@media screen and (max-width: 1185px) {
+@media screen and (max-width: 1295px) {
     #diagonal #diagonal-line {
         transform: rotate(-8deg);
     }
 }
 
-@media screen and (max-width: 1175px) {
+@media screen and (max-width: 1285px) {
     #diagonal #diagonal-line {
         transform: rotate(-9deg);
     }
 }
 
-@media screen and (max-width: 1165px) {
+@media screen and (max-width: 1275px) {
     #diagonal #diagonal-line {
         transform: rotate(-9.65deg);
     }
+}
 
+@media screen and (max-width: 1165px) {
     nav ul {
         font-size: 2.5vmax;
     }
 }
 
-@media screen and (max-width: 800px) {
-
+@media screen and (max-width: 1000px) {
     #picture {
         max-width: 50vmin;
     }
