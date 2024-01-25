@@ -30,6 +30,10 @@
     color: black;
 }
 
+hr {
+    color: black
+}
+
 body {
     overflow: hidden;
     font-family: NanumMyeongjo-Regular;
@@ -115,13 +119,12 @@ nav #github a {
 
 #horizontal {
     position: absolute;
-
 }
 
 #horizontal #horizontal-line {
     position: absolute;
     transition: transform 0.3s ease-in;
-    width: 100vw;
+
 }
 
 #diagonal {
