@@ -61,7 +61,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 62rem;
+    max-width: 67vw;
 }
 
 main p:hover {
