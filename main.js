@@ -1,8 +1,3 @@
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'Portfolio/index.html', true);
-xhr.setRequestHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
-xhr.send();
-
 document.addEventListener('mousemove', function (event) {
     var horizontalLine = document.getElementById('horizontal-line');
     var navbarOptions = document.getElementsByClassName('navbar-option');
@@ -32,7 +27,6 @@ function getColor(distance) {
     return 'hsl(' + hue + ', 100%, 50%)';
 }
 
-
 function handleNavbarOptionClick(navbarOption) {
     if (navbarOption.id !== 'github') {
         var body = document.querySelector('body');
@@ -57,3 +51,16 @@ function handleNavbarOptionClick(navbarOption) {
         }, 800);
     }
 }
+
+window.onpopstate = function(event) {
+    var body = document.querySelector('body');
+    var main = document.querySelector('main');
+    var navbar = document.querySelector('nav');
+    body.style.transition = 'all 0.5s ease';
+    main.style.transition = 'all 0.5s ease';
+    navbar.style.transition = 'all 0.5s ease';
+    main.style.transform = '';
+    navbar.style.opacity = '';
+    body.style.opacity = '';
+};
+
