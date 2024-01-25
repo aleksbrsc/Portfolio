@@ -46,10 +46,6 @@ function handleNavbarOptionClick(navbarOption) {
             body.style.opacity = '0';
         }, 200);
         setTimeout(function () {
-            body.style.opacity = '1';
-            main.style.transform = 'translateX(0)';
-            navbar.style.opacity = '1';
-
             if (navbarOption.id === 'projects') {
                 window.location.href = 'projects.html';
             } else if (navbarOption.id === 'info') {
