@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <title>abrsc</title>
+</head>
+
+<body>
+    <main>
+        <a href="index.html">
+            <img id="back" src="images/back2.svg"></img>
+        </a>
+
+        <h2>PROJECTS</h2>
+        <a href="https://github.com/aleksbrsc/Pathfinding-Visualizer" target="_blank">Pathfinding Visualizer</a>
+        <p>A tool for visualizing procedural generation and pathfinding algorithms.</p>
+        <br><br>
+        <a href="https://github.com/aleksbrsc/Legal-Lens" target="_blank">Legal Lens</a>
+        <p>Web app to help foreigners apply for legal documents faster using AI.<br><br><em>Hackville 2024 winner</em></p>
+        <br><br>
+        <a href="https://blackburnconstruction.net" target="_blank">Blackburn</a>
+        <p>Website commission and software solutions for a construction company.<br><br></p>
+        <br><br>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var body = document.querySelector('body');
+            body.style.opacity = '0';
+
+            setTimeout(function () {
+                body.style.transition = 'opacity 0.5s ease';
+                body.style.opacity = '1';
+            }, 200);
+        });
+    </script>
+</body>
+
+</html>

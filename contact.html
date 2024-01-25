@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <title>abrsc</title>
+</head>
+
+<body>
+    <main>
+        <a href="index.html">
+            <img id="back" src="images/back2.svg"></img>
+        </a>
+
+        <h2>CONTACT</h2>
+        <a href="mailto:aleksbrsc@gmail.com" target="_blank">aleksbrsc@gmail.com</a>
+        <br><br>
+        <a href="https://www.linkedin.com/in/aleksbrsc" target="_blank">LinkedIn</a>
+        <br><br>
+        <a href="https://discordapp.com/users/meowdem." target="_blank">Discord</a>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var body = document.querySelector('body');
+            body.style.opacity = '0';
+
+            setTimeout(function () {
+                body.style.transition = 'opacity 0.5s ease';
+                body.style.opacity = '1';
+            }, 200);
+        });
+    </script>
+</body>
+
+</html>

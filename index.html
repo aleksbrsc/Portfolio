@@ -4,12 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>abrsc</title>
 </head>
 
@@ -38,6 +34,16 @@
 
     <script src="decor.js"></script> <!-- random decoration -->
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var body = document.querySelector('body');
+            body.style.opacity = '0';
+
+            setTimeout(function () {
+                body.style.transition = 'opacity 0.5s ease';
+                body.style.opacity = '1';
+            }, 200);
+        });
+
         document.addEventListener('mousemove', function (event) {
             var horizontalLine = document.getElementById('horizontal-line');
             var navbarOptions = document.getElementsByClassName('navbar-option');
@@ -67,22 +73,32 @@
             return 'hsl(' + hue + ', 100%, 50%)';
         }
 
-        
-                function handleNavbarOptionClick(navbarOption) {
-                    if (navbarOption.id !== 'github') {
-                        var body = document.querySelector('body');
-                        var main = document.querySelector('main');
-                        var navbar = document.querySelector('nav');
-                        body.style.transition = 'all 0.5s ease'; 
-                        main.style.transition = 'all 0.5s ease';
-                        navbar.style.transition = 'all 0.5s ease';
-                        main.style.transform = 'translateX(-105%)';
-                        navbar.style.opacity = '0';
-                        setTimeout(function () {
-                            body.style.opacity = '0';
-                        }, 200);
+        // site transition
+        function handleNavbarOptionClick(navbarOption) {
+            if (navbarOption.id !== 'github') {
+                var body = document.querySelector('body');
+                var main = document.querySelector('main');
+                var navbar = document.querySelector('nav');
+                body.style.transition = 'all 0.5s ease';
+                main.style.transition = 'all 0.5s ease';
+                navbar.style.transition = 'all 0.5s ease';
+                main.style.transform = 'translateX(-105%)';
+                navbar.style.opacity = '0';
+                setTimeout(function () {
+                    body.style.opacity = '0';
+                }, 200);
+                setTimeout(function () {
+                    if (navbarOption.id === 'projects') {
+                        window.location.href = 'projects.html';
+                    } else if (navbarOption.id === 'info') {
+                        window.location.href = 'info.html';
+                    } else if (navbarOption.id === 'contact') {
+                        window.location.href = 'contact.html';
                     }
-                }
+                }, 500);
+
+            }
+        }
 
     </script>
 </body>

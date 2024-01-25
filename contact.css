@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Kaisei-Decol;
+    src: url(fonts/Kaisei_Decol/KaiseiDecol-Regular.ttf);
+}
+
+@font-face {
+    font-family: NanumMyeongjo-Bold;
+    src: url(fonts/Nanum_Myeongjo/NanumMyeongjo-Bold.ttf);
+}
+
+@font-face {
+    font-family: NanumMyeongjo-Regular;
+    src: url(fonts/Nanum_Myeongjo/NanumMyeongjo-Regular.ttf);
+}
+
+@font-face {
+    font-family: NanumMyeongjo-ExtraBold;
+    src: url(fonts/Nanum_Myeongjo/NanumMyeongjo-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Mori;
+    src: url(fonts/PPMori/PPMori-Variable.ttf);
+}
+
+body {
+    overflow: hidden;
+    color: #000;
+    background-color: #FFF;
+    font-family: Mori;
+
+}
+
+main h2 {
+    margin-top: 20vh;
+    margin-left: 20vw;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+main a {
+    margin-left: 20vw;
+    color: #777;
+    font-size: 1.25rem;
+}
+
+#back {
+    max-width: 10vh;
+    position: fixed;
+    margin: 1.5rem;
+    bottom: 0;
+    right: 0;
+}

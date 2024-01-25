@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="info.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <title>abrsc</title>
+</head>
+
+<body>
+    <main>
+        <img id="info" src="images/info.png">
+    </main>
+
+    <a href="index.html">
+        <img id="back" src="images/back2.svg"></img>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var body = document.querySelector('body');
+            body.style.opacity = '0';
+
+            setTimeout(function () {
+                body.style.transition = 'opacity 0.5s ease';
+                body.style.opacity = '1';
+            }, 200);
+        });
+
+
+    </script>
+</body>
+
+</html>
