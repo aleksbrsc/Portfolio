@@ -109,7 +109,6 @@ nav ul li:hover {
 }
 
 .navbar-option {
-    transition: color 0.1s ease-out;
     color: black;
 }
 
