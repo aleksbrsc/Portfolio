@@ -42,6 +42,7 @@ main a {
     margin-left: 20vw;
     color: #777;
     font-size: 1.25rem;
+    cursor: crosshair;
 }
 
 #back {

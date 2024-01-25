@@ -32,6 +32,7 @@ function getColor(distance) {
     return 'hsl(' + hue + ', 100%, 50%)';
 }
 
+
 function handleNavbarOptionClick(navbarOption) {
     if (navbarOption.id !== 'github') {
         var body = document.querySelector('body');
@@ -54,8 +55,5 @@ function handleNavbarOptionClick(navbarOption) {
                 window.location.href = 'contact.html';
             }
         }, 800);
-
-
-
     }
 }

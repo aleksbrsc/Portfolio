@@ -31,6 +31,10 @@ body {
 
 }
 
+main {
+    max-width: 80vw;
+}
+
 main h2 {
     margin-top: 20vh;
     margin-left: 20vw;
@@ -42,6 +46,7 @@ main a {
     margin-left: 20vw;
     color: #777;
     font-size: 1.25rem;
+    cursor: crosshair;
 }
 
 main p {
@@ -57,4 +62,54 @@ main p {
     margin: 1.5rem;
     bottom: 0;
     right: 0;
+}
+
+
+@media (max-width: 700px) {
+    body {
+        overflow: auto;
+        margin: 0;
+    }
+
+    main {
+        margin-bottom: 0rem;
+    }
+
+    footer {
+        color: none;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #fff; 
+    }
+    
+    #back {
+        position: relative;
+    }
+
+    main h2,
+    main a,
+    main p {
+        margin-left: 10vw;
+    }
+}
+
+
+
+
+@media (max-width: 300px) {
+    main h2 {
+        font-size: 9vw;
+    }
+
+    main a {
+        font-size: 6vw;
+    }
+
+    main p {
+        font-size: 4vw;
+    }
+
+    #back {
+        max-width: 14vw;
+    }
 }
