@@ -122,6 +122,8 @@ nav #github a {
 }
 
 #horizontal #horizontal-line {
+    margin: 0;
+    padding: 0;
     position: absolute;
     transition: transform 0.3s ease-in;
 

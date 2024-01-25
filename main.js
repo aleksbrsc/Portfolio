@@ -49,7 +49,7 @@ function handleNavbarOptionClick(navbarOption) {
             } else if (navbarOption.id === 'contact') {
                 window.location.href = 'contact.html';
             }
-        }, 500);
+        }, 800);
 
     }
 }
