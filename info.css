@@ -23,17 +23,36 @@
     src: url(fonts/PPMori/PPMori-Variable.ttf);
 }
 
-
-main {
+body {
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #000;
+    background-color: #FFF;
+    font-family: Mori;
+
 }
 
-#info {
-    max-width: 70vh;
-    margin: 2rem;
+main {
+    max-width: 80vw;
+}
+
+main h2 {
+    margin-top: 20vh;
+    margin-left: 20vw;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+main a {
+    color: #777;
+    font-size: 1.25rem;
+    cursor: crosshair;
+}
+
+main p {
+    margin-left: 20vw;
+    color: #a4a4a4;
+    font-size: 1rem;
+
 }
 
 #back {
@@ -44,6 +63,7 @@ main {
     right: 0;
 }
 
+
 @media (max-width: 700px) {
     body {
         overflow: auto;
@@ -51,15 +71,7 @@ main {
     }
 
     main {
-        margin-top: 20vh;
         margin-bottom: 0rem;
-        height: 65vh;
-
-    }
-
-    #info {
-        width: 80vw;
-        margin: 0;
     }
 
     footer {
@@ -77,5 +89,26 @@ main {
     main a,
     main p {
         margin-left: 10vw;
+    }
+}
+
+
+
+
+@media (max-width: 300px) {
+    main h2 {
+        font-size: 9vw;
+    }
+
+    main a {
+        font-size: 6vw;
+    }
+
+    main p {
+        font-size: 4vw;
+    }
+
+    #back {
+        max-width: 14vw;
     }
 }
