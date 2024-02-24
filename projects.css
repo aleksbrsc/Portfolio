@@ -36,7 +36,6 @@ main {
 }
 
 main h2 {
-    margin-top: 20vh;
     margin-left: 20vw;
     font-size: 2rem;
     font-weight: normal;
@@ -72,6 +71,7 @@ main p {
     }
 
     main {
+        
         margin-bottom: 0rem;
     }
 
@@ -86,7 +86,11 @@ main p {
         position: relative;
     }
 
-    main h2,
+    main h2 {
+        margin-top: 10vh;
+        margin-left: 10vw;
+    }
+
     main a,
     main p {
         margin-left: 10vw;
